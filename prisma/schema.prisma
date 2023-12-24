@@ -7,6 +7,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model todos {
-  id String @id @default(auto()) @map("_id") @db.ObjectId
+model todo {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt   DateTime @default(now())
+  isCompleted Boolean
+  title       String
 }

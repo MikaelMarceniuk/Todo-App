@@ -13,7 +13,7 @@ const defaultTaskValues: Prisma.todoCreateInput = {
 
 const TodoCreator: React.FC = () => {
   const [taskValues, setTaskValues] = useState(defaultTaskValues)
-	const { fetchTodos } = useTodoContext()
+  const { fetchTodos } = useTodoContext()
 
   const handleOnKeyDown = async (
     event: React.KeyboardEvent<HTMLInputElement>
@@ -23,9 +23,9 @@ const TodoCreator: React.FC = () => {
     event.preventDefault()
     const { isSuccess } = await createTodo(taskValues)
     if (isSuccess) {
-			setTaskValues(defaultTaskValues)
-			await fetchTodos()
-		}
+      setTaskValues(defaultTaskValues)
+      await fetchTodos()
+    }
   }
 
   return (
