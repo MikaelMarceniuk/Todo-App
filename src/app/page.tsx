@@ -9,7 +9,7 @@ const HomePage = () => {
         <div className="w-full h-12 bg-[#25273D] rounded-md flex gap-3 px-5">
           <CustomCheckbox />
           <input
-            className="bg-[#25273D]"
+            className="bg-[#25273D] text-[#C8CBE7] focus:outline-none"
             placeholder="Create a new todo..."
           />
         </div>
