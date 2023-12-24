@@ -10,6 +10,7 @@ const HomePage = () => {
     <main className="min-h-screen px-7 py-12 bg-[#171823] bg-dark-mobile bg-contain bg-no-repeat">
       <div className="h-full">
         <Header />
+
         <div className="w-full h-12 px-5 mt-10 bg-[#25273D] rounded-md flex items-center gap-3 ">
           <CustomCheckbox />
           <input
@@ -17,6 +18,7 @@ const HomePage = () => {
             placeholder="Create a new todo..."
           />
         </div>
+
         <div className="h-[368px] mt-4 bg-[#25273D] flex flex-col rounded-md">
           <div className="flex-[6] overflow-auto">
             {todoItems.map((p) => (
@@ -42,6 +44,12 @@ const HomePage = () => {
             </button>
           </div>
         </div>
+
+        <ul className="h-12 mt-4 bg-[#25273D] rounded-md flex justify-center items-center gap-5 text-sm font-bold text-[#5B5E7E]">
+          <li className="text-[#3A7CFD]">All</li>
+          <li>Active</li>
+          <li>Completed</li>
+        </ul>
       </div>
     </main>
   )
