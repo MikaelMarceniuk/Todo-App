@@ -1,0 +1,11 @@
+.customCheckbox:checked {
+	background-color: #55DDFF;
+}
+
+.customCheckbox:checked::before {
+  content: url('/icon-check.svg');
+  color: #fff;
+  position: relative;
+  top: -4px;
+	right: -3px
+}
