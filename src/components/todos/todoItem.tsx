@@ -1,9 +1,9 @@
 'use client'
 
 import Image from 'next/image'
-import CustomCheckbox from './customCheckbox'
-import { ITodoItem } from '@/@types/ITodoItem'
+import CustomCheckbox from '../customCheckbox'
 import { useState } from 'react'
+import { ITodoItem } from '@/@types/ITodoItem'
 
 const TodoItem: React.FC<ITodoItem> = ({ id, value, isCompleted }) => {
   const [isTaskCompleted, setIsTaskCompleted] = useState(isCompleted)
