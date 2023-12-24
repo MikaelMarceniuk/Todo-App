@@ -50,6 +50,10 @@ const HomePage = () => {
           <li>Active</li>
           <li>Completed</li>
         </ul>
+
+        <p className="mt-10 text-center text-[#5B5E7E] text-sm">
+          Drag and drop to reorder list
+        </p>
       </div>
     </main>
   )
