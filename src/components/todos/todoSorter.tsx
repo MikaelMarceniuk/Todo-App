@@ -13,7 +13,7 @@ const TodoSorter: React.FC = () => {
   }
 
   const getClassname = (key: TodoFilter) => {
-    let cssClass = 'hover:text-white cursor-pointer'
+    let cssClass = 'hover:text-[#494C6B] dark:hover:text-white cursor-pointer'
 
     if (currentFilter == key) cssClass += ` text-[#3A7CFD]`
 
@@ -21,7 +21,7 @@ const TodoSorter: React.FC = () => {
   }
 
   return (
-    <ul className="h-full flex justify-center items-center gap-5 text-sm font-bold text-[#5B5E7E]">
+    <ul className="h-full flex justify-center items-center gap-5 text-sm font-bold text-[#9495A5] dark:text-[#5B5E7E]">
       <li
         className={getClassname('All')}
         onClick={handleOnClick('All')}

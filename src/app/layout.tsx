@@ -1,6 +1,7 @@
 import type { Metadata, NextPage } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import LightDarkModeProvider from '@/providers/lighDarkModeProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,7 +21,9 @@ const RootLayout: NextPage<IProps> = ({ children }) => {
         href="/favicon-32x32.png"
         sizes="any"
       />
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <LightDarkModeProvider>{children}</LightDarkModeProvider>
+      </body>
     </html>
   )
 }

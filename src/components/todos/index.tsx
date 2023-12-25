@@ -3,7 +3,6 @@
 import { createContext, useContext, useEffect, useState } from 'react'
 import TodoCreator from './todoCreator'
 import TodoList from './todoList'
-import TodoSorter from './todoSorter'
 import { todo } from '@prisma/client'
 import { getTodos } from '@/db/todoRepo'
 import { TodoFilter } from '@/@types/TodoFilter'

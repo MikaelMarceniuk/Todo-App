@@ -29,7 +29,7 @@ const TodoCreator: React.FC = () => {
   }
 
   return (
-    <div className="w-full h-12 px-5 mt-10 bg-[#25273D] rounded-md flex items-center gap-3 ">
+    <div className="w-full h-12 px-5 mt-10  rounded-md flex items-center gap-3 bg-white dark:bg-[#25273D]">
       <CustomCheckbox
         checked={taskValues.isCompleted}
         onChange={(e) =>
@@ -40,7 +40,7 @@ const TodoCreator: React.FC = () => {
         }
       />
       <input
-        className="bg-[#25273D] text-[#C8CBE7] text-xs focus:outline-none"
+        className="text-xs focus:outline-none dark:bg-[#25273D] dark:text-[#C8CBE7]"
         placeholder="Create a new todo..."
         value={taskValues.title}
         onChange={(e) =>

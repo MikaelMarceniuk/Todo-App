@@ -1,6 +1,11 @@
+'use client'
+
+import { useLightDarkModeContext } from '@/providers/lighDarkModeProvider'
 import Image from 'next/image'
 
 const Header: React.FC = () => {
+  const { isDarkMode, toggleDarkMode } = useLightDarkModeContext()
+
   return (
     <header className="flex justify-between">
       <div className="w-28 h-5 relative">
@@ -10,10 +15,13 @@ const Header: React.FC = () => {
           fill
         />
       </div>
-      <div className="w-5 h-5 relative">
+      <div
+        className="w-5 h-5 relative cursor-pointer"
+        onClick={toggleDarkMode}
+      >
         <Image
-          src="./icon-sun.svg"
-          alt="Sun icon"
+          src={isDarkMode ? './icon-sun.svg' : './icon-moon.svg'}
+          alt="Sun and Moon icon"
           fill
         />
       </div>

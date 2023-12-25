@@ -27,19 +27,22 @@ const TodoItem: React.FC<todo> = ({ id, title, isCompleted }) => {
   }
 
   return (
-    <div className="px-3 py-4 flex items-center gap-2 border-b-2 border-[#393A4B]">
+    <div className="px-3 py-4 flex items-center gap-2 border-b-2 border-[#E3E4F1] dark:border-[#393A4B]">
       <CustomCheckbox
         checked={isTaskComplete}
         onChange={handleOnCheck}
       />
       <span
         className={`text-xs flex-[6] ${
-          isCompleted ? 'text-[#4D5067] line-through' : 'text-[#C8CBE7]'
+          isCompleted
+            ? 'text-[#4D5067] line-through'
+            : 'dark:text-[#C8CBE7] text-[#4D5067]'
         }`}
       >
         {title}
       </span>
       <Image
+        className="cursor-pointer"
         src={'/icon-cross.svg'}
         alt="Cross"
         width={12}
