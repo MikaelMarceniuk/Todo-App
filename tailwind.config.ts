@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'dark-mobile': 'url("/bg-mobile-dark.jpg")',
+        'dark-desktop': 'url("/bg-desktop-dark.jpg")',
       },
     },
   },

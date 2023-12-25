@@ -12,22 +12,30 @@ const TodoSorter: React.FC = () => {
     await fetchTodos(newFilter)
   }
 
+  const getClassname = (key: TodoFilter) => {
+    let cssClass = 'hover:text-white cursor-pointer'
+
+    if (currentFilter == key) cssClass += ` text-[#3A7CFD]`
+
+    return cssClass
+  }
+
   return (
-    <ul className="h-12 mt-4 bg-[#25273D] rounded-md flex justify-center items-center gap-5 text-sm font-bold text-[#5B5E7E]">
+    <ul className="h-full flex justify-center items-center gap-5 text-sm font-bold text-[#5B5E7E]">
       <li
-        className={currentFilter == 'All' ? `text-[#3A7CFD]` : ''}
+        className={getClassname('All')}
         onClick={handleOnClick('All')}
       >
         All
       </li>
       <li
-        className={currentFilter == 'Active' ? `text-[#3A7CFD]` : ''}
+        className={getClassname('Active')}
         onClick={handleOnClick('Active')}
       >
         Active
       </li>
       <li
-        className={currentFilter == 'Completed' ? `text-[#3A7CFD]` : ''}
+        className={getClassname('Completed')}
         onClick={handleOnClick('Completed')}
       >
         Completed

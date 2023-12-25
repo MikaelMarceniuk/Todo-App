@@ -54,7 +54,6 @@ const Todo: React.FC = () => {
     >
       <TodoCreator />
       <TodoList />
-      <TodoSorter />
     </TodoProvider.Provider>
   )
 }
